@@ -1,0 +1,38 @@
+The series of events that happens from the mounting of a React component to its Unmounting.
+Mounting - Birth of your component
+Update - Growth of your component
+Unmounting - Death of your component
+
+METHOD IN REACT COMPONENT LIFE CYCLE
+The render() method is used to render HTML to the component in react. This method is required for class based component to render the DOM. It runs during the mounting and updating of your component. Render() method should be pure you can modify state inside it!
+
+// **************************************************************************
+The componentDidMount() method run after the component output has been rendered to the DOM.
+
+These methods are called in the following order when an instance of a component is being created and inserted into the DOM:
+
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+// **************************************************************************
+The componentDidUpdate() method id invoked as soon as the updating happens. The most common use case for the componentDidUpdate() method is updating the DOM  in response to props os state changes. 
+
+An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
+
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+componentDidUpdate() is invoked immediately after updating occurs. This method is not called for the initial render.
+
+// **************************************************************************
+componentWillUnmount() life cycle method is called just before the component is unmounted and destroyed
+
+This method is called when a component is being removed from the DOM:
+componentWillUnmount()
+
+componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in componentDidMount().
